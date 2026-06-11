@@ -1,0 +1,107 @@
+|<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>café de la sierra</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <div class="contenedor">
+        
+        <header class="cabecera">
+            <div class="logo">
+             
+                <video autoplay muted loop
+                    width="100%" height="100%">
+                    <source src="video/animacion.mp4" type="video/mp4"></video>
+
+            </div>
+
+            <nav class="menu">
+                <div class="hamburguesa" id="hamburguesa">
+                    <span class="barra"></span>
+                    <span class="barra"></span>
+                    <span class="barra"></span>
+                </div>
+                
+                
+                    
+                    <ul class="menulista" id="menulista">
+                   <li class="menuitem"><a href="#" class="menulink">inicio</a></li>
+                  <li class="menuitem"><a href="#" class="menulink">preventas</a></li>
+                  <li class="menuitem"><a href="productos.html" class="menulink">productos</a></li>
+                   <li class="menuitem"><a href="contactos.html" class="menulink">contactos</a></li>
+                  </ul>
+                
+            </nav>
+        </header>
+
+        <section class="banner">
+
+            <div class="banner-contenido">
+                <h1>el mejor cafe para tus mejores momentos</h1>
+                <p>seleccionamos granos de la más alta calidad para afrocer una experiencia única en cada taza.</p>
+            </div>
+            <div class="banner-img">
+                <img src="img/cafe1.WEBP" alt="Imagen Principal">  
+            </div>
+        </section>
+
+        <section class="sobre-nosotros">
+            <div class="nosotros-img">
+                <img src="img/cafes.jpg" alt="Sobre nosotros">
+            </div>
+            <div class="nosotros-texto">
+                <h2>más que café, una experiencia</h2>
+                <p>en café aroma trabajamos con dedicación para llevar hasta tu taza granas seleccionados de las mejores regiones cafeteras del mundo. Calidad, sabor y sostenebilidad en cada paso de nuestro proceso.</p>
+                <button class="btn-sec">CONOCE NUESTRA HISTORIA</button>
+            </div>
+        </section>
+
+        <h2 class="titulo-seccion">nuestros cafes</h2>
+        
+        <section class="productos">
+            <div class="tarjeta">
+                <img src="img/cafe2.jpg" alt="Origen">
+                <h3>origen</h3>
+                <p>granos de las mejores regiones del mundo.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="img/cafe3.jpg" alt="Productos">
+                <h3>productos</h3>
+                <p>café en grano molido y productos de café de manera efectiva implica apelar a los sentidos (aroma, sabor, textura) y destacar la calidad del origen y tueste.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="img/cafe4.jpg" alt="Preparación">
+                <h3>preparacion</h3>
+                <p>consejos para el café perfecto Granos Frescos y Molienda: Comienza con café de especialidad y muélelo justo antes de prepararlo para conservar sus aceites esenciales.</p>
+            </div>
+            <div class="tarjeta">
+                <img src="img/cafe5.jpg" alt="Accesorios">
+                <h3>accesorios</h3>
+                <p>todo lo que necesitas molinillos de café, básculas de precisión, prensadores (tampers), jarras para espumar leche y métodos de goteo (V60/Chemex).</p>
+            </div>
+        </section>
+
+        <footer class="pie">
+            <p>2026 café Aroma. Todos los derechos reservados contactanos al númer:9511458392
+                <br>
+                att:Hosmar.O, Cristian. J
+            </p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
+
+<script> 
+    const hamburguesa = document.getElementById("hamburguesa");
+    const menulista = document.getElementById("menulista");
+
+    hamburguesa.addEventListener("click", () => {
+        hamburguesa.classList.toggle("active");
+        menulista.classList.toggle("active");
+    });
+</script>

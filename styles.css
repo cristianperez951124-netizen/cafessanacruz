@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(to bottom right, blue, green);
+}
+
+.contenedor {
+    background-color: #f0ece2;
+    padding: 20px;
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.cabecera {
+    background-color: #D6B581;
+    grid-column: span 4;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 5px;
+    align-items: center;
+}
+
+.logo {
+    background-color: white;
+    padding: 5px;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.logo video{
+    width:100%;
+}
+.menu a {
+    text-decoration: none;
+    color: #4D3618;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.menulista {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.menuitem {
+    transition-duration: 1s;
+}
+
+.menulink {
+    text-decoration: none;
+    color: #4D3618;
+    border: 6px solid;
+    background-color: #D6B581;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 3px #000;
+    display: block;
+    text-align: center;
+}
+
+.banner {
+    background-color: #B59164;
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.banner h1 {
+    font-size: 30px;
+    color: white;
+}
+
+.sobre-nosotros {
+    grid-column: span 4;
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.nosotros-texto {
+    flex: 1;
+}
+
+.nosotros-img {
+    flex: 1;
+}
+
+.titulo-seccion {
+    grid-column: span 4;
+    text-align: center;
+    margin-top: 20px;
+    color: #4D3618;
+}
+
+.productos {
+    grid-column: span 4;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    text-align: center;
+}
+
+.tarjeta {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.btn,
+.btn-sec {
+    margin-top: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+    border: none;
+    background-color: #4D3618;
+    color: white;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #D6B581;
+    color: #4D3618;
+}
+
+.pie {
+    grid-column: span 4;
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    border-radius: 5px;
+}
+
+h1 {
+    color: white;
+    text-decoration: underline;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+h2 {
+    color: yellow;
+    text-decoration: underline;
+    font-size: 20px;
+    text-align: center;
+    text-shadow: 2px 2px 5px black;
+}
+
+.parrafo1 {
+    font-size: 18px;
+    color: #FCD70D;
+    text-shadow: 2px 2px 5px black;
+    font-family: Courier, monospace;
+    text-align: left;
+}
+
+.parrafo2 {
+    font-size: 18px;
+    color: #FCD70D;
+    text-shadow: 2px 2px 5px red;
+    font-family: Arial, sans-serif;
+    text-align: justify;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.img.principal {
+    width: 800px;
+    height: 300px;
+    border-radius: 50px;
+    filter: saturate(100%);
+    border: 5px dotted blue;
+}
+
+img.secundario {
+    width: 250px;
+    filter: grayscale(100%);
+}
+
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.barra {
+    width: 25px;
+    height: 3px;
+    background-color: #4D3618;
+    margin: 3px;
+}
+
+@media (max-width: 768px) {
+
+    .hamburguesa {
+        display: flex;
+    }
+
+    .contenedor {
+        grid-template-columns: 1fr;
+        width: 98%;
+        padding: 5px;
+    }
+
+    .cabecera {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        display: flex;
+        flex-direction: column;
+        background-color: #9329ff;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menulista {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .menulista.active {
+        display: flex;
+    }
+
+    .menuitem {
+        width: 100%;
+    }
+
+    .menulink {
+        width: 100%;
+        margin: 0;
+    }
+
+    .hamburguesa.active .barra:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburguesa.active .barra:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburguesa.active .barra:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .banner {
+        display: none;
+    }
+
+    .minis {
+        display: none;
+    }
+
+    .sobre-nosotros,
+    .productos {
+        display: block;
+    }
+}
